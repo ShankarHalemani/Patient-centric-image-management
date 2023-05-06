@@ -3,11 +3,13 @@
 ## Developed by:
 Team C15
 
-347 Shankarling Halemani
-349 Tafreen Hussain
-351 Shravan Nayak
-354 Fayaz Kuduremane
-361 Sana Razeen
+<ol>
+<li>347 Shankarling Halemani</li>
+<li>349 Tafreen Hussain</li>
+<li>351 Shravan Nayak</li>
+<li>354 Fayaz Kuduremane</li>
+<li>361 Sana Razeen</li>
+</ol>
   
 
 ## Requirements
