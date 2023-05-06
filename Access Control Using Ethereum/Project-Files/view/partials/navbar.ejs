@@ -1,0 +1,21 @@
+<div class="navbar">
+    <div class="logo">
+        <img src="../../images/cover.png" alt="logo">
+    </div>
+    <div class="links">
+        <ul>
+            <% if(auth){ %>
+                <li><a href="/action/access/provided">My Access</a></li>
+                <li><a href="/action/accept/requests">My Requests</a></li>
+                <li><a href="/action/upload">Upload</a></li>
+                <li><a href="/action/request/">Request hash</a></li>
+                <li><form action="/user/logout" method="POST">
+                    <button>Logout</button>
+                </form></li>
+            <% }else{ %>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">SignUp</a></li>
+            <% } %>
+        </ul>
+    </div>
+</div>

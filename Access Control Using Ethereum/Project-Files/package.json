@@ -1,0 +1,27 @@
+{
+  "name": "projikt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "ipfs-http-client": "^60.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^7.0.3",
+    "path": "^0.12.7",
+    "web3": "^1.9.0"
+  }
+}

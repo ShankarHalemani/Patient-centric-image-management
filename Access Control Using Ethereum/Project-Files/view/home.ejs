@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/nav.css">
+</head>
+<body>
+    <div class="banner-container">
+        <%- include("./partials/navbar.ejs") %>
+        <div class="text">
+            <h1 class="firstH">Patient Centric</h1>
+            <h2 class="secondH">Image Access Management</h2>
+            <h1 class="thirdH"><span class="span1">Using</span> <span class="span2">Etherium</span></h1>
+        </div>
+    </div>
+    <div class="steps">
+        <div class="step">
+            <h3>Create Your Account</h3>
+            <img src="../images/67Z_ui21.jpg" alt="login">
+        </div>
+        <div class="step">
+            <h3>Upload Images</h3>
+            <img src="../images/upload.jpg" alt="login">
+        </div>
+        <div class="step">
+            <h3>Provide Access to Other users</h3>
+            <img src="../images/access.jpg" alt="login">
+        </div>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

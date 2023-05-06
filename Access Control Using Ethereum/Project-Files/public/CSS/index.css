@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  padding: 0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* imported fonts */
+
+/* define your css variables here */
+:root{
+  --main-color: #253591;
+  --link-text: white;
+}
+
+.nav-container{
+  width: 100%;
+  height: auto;
+  min-height: 70px;
+  /* background: lightgreen; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: -3px -1px 12px -6px rgba(0,0,0,0.75);
+}
+.nav-container h1 a{
+  color: black;
+  text-decoration : none;
+  margin-left: 20px;
+}
+.nav-container div{
+  flex-basis: 20%;
+}
+.nav-container div ul{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav-container div ul li{
+  list-style-type: none;
+}
+
+.nav-container div a{
+  text-decoration: none;
+  background: var(--main-color);
+  color: white;
+  padding: 7px 15px;
+  border-radius: 2px;
+}
+
+.banner-container{
+  background: url("../images/image1.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  filter: blur(0.3px);
+}
+
+.text{
+  position: absolute;
+  left: 100px;
+  top: 300px;
+}
+
+.firstH{
+  font-size: 100px;
+  color: rgba(184, 178, 178,0.9);
+}
+.secondH{
+  color:  rgba(184, 178, 178,0.7);
+  font-size: 53px;
+  position: relative;
+  font-weight: bolder;
+  top: -30px;
+  left:5px;
+}
+.thirdH{
+  color: rgba(184, 178, 178,0.5);
+  font-size: 99px;
+  position: relative;
+  top: -53px;
+}
+
+.steps{
+  width: 80%;
+  height: 350px;
+  margin: auto;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* .step:first-of-type{
+} */
+
+.step{
+  flex-basis: 350px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+}
+
+.step img{
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* .step:last-of-type{
+} */
+
+.footer{
+  width: 100%;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  background: rgb(12, 12, 12);
+  color:rgba(184, 178, 178,0.9);
+}

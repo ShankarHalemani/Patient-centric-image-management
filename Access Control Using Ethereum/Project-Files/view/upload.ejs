@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File Hash</title>
+
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/nav.css">
+    <link rel="stylesheet" href="/CSS/navUp.css">
+    <link rel="stylesheet" href="/CSS/upload.css">
+
+    
+    <script src="/JS/upload.js" defer></script>
+
+</head>
+<body>
+    <%- include("./partials/navbar.ejs")  %>
+    <div class="upload-form-container">
+        <form id="form" class="form" action="/action/upload" method="POST">
+            <div class="field-container hash">
+              <input type="text" id="hash" name="hash" autocomplete="off" >
+              <p id="hash-error"></p>
+            </div>
+            <div class="field-container description">
+              <textarea name="description" id="description" cols="30" rows="10"></textarea>
+              <p id="description-error"></p>
+            </div>
+            <div class="field-container">
+              <button id="sign-up-button" disabled>Upload</button>
+            </div>
+          </form>
+    </div>
+</body>
+</html>

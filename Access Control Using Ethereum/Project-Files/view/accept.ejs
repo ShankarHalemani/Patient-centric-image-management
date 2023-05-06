@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My requests</title>
+
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/nav.css">
+    <link rel="stylesheet" href="/CSS/request.css">
+    <link rel="stylesheet" href="/CSS/navUp.css">
+
+</head>
+
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+    <div class="hash-container">
+        <% if(requests.length){ %>
+            <% for(request of requests){ %>
+                <div class="hash">
+                    <h3><%= request.requestUser.username %></h3>
+                    <div>
+                        <h4>Image Hash :</h4>
+                        <p class=""><%=  request.hash %></p>
+                    </div>
+                    <p><%= request.reason %></p>
+                    <!-- <button id="request-id-btn">Request</button> -->
+                    <div class="reason-form-container accept-forms">
+                        <form class="reason-form" action="/action/accept/<%= request._id %>" method="POST">
+                            <button class="accept-btns">Accept request</button>
+                        </form>
+                        <form class="reason-form" action="/action/reject/<%= request._id %>" method="POST">
+                            <button class="accept-btns">Reject request</button>
+                        </form>
+                    </div>
+                </div>
+            <% } %>
+        <% }else{ %>
+            <h1>You do not have any requests!</h1>
+        <%}%>
+    </div>
+</body>
+
+</html>

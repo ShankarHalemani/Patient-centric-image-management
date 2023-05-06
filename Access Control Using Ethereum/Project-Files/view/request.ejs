@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File Hash</title>
+
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/navUp.css">
+    <link rel="stylesheet" href="/CSS/nav.css">
+    <link rel="stylesheet" href="/CSS/request.css">
+
+</head>
+
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+    <div class="hash-container">
+        <% if(hashes.length){ %>
+            <% for(hash of hashes){ %>
+                <div class="hash">
+                    <h3><%= hash.owner.username %></h3>
+                    <div>
+                        <h4>Image Hash :</h4>
+                        <p class="hash-text"><%= hash.hash %></p>
+                    </div>
+                    <p><%= hash.description %></p>
+                    <!-- <button id="request-id-btn">Request</button> -->
+                    <div class="reason-form-container">
+                        <form class="reason-form" action="/action/reason/<%= hash._id %>/<%= hash.owner._id %>" method="POST">
+                            <div class="field-container reason">
+                                <textarea name="reason" id="reason" cols="15" rows="3" required></textarea>
+                            </div>
+                            <button>Request Image Access</button>
+                        </form>
+                    </div>
+                </div>
+            <% } %>
+        <% }else{ %>
+            <h1>There are no hashes available to requests!</h1>
+        <% } %>
+    </div>
+</body>
+
+</html>

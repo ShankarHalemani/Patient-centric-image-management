@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessable images</title>
+
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/nav.css">
+    <link rel="stylesheet" href="/CSS/navUp.css">
+    <link rel="stylesheet" href="/CSS/request.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/JS/display_pro.js" defer></script>
+</head>
+
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+    <div class="hash-container">
+        <% if(access.length){ %>
+            <% for(data of access){ %>
+                <div class="hash">
+                    <h3>Owner: <%= data.owner.username %></h3>
+                    <div>
+                        <h4>Image Hash :</h4>
+                        <p class=""><%= data.hash %></p>
+                    </div>
+                    <p><%= data.description %></p>
+                    <!-- <button id="request-id-btn">Request</button> -->
+                    <a href="http://localhost:8080/ipfs/<%= data.hash %>" target="blank">Open Image</a>
+                    <form id="display-validity-form" action="/action/validate/hash/<%= data._id %>" method="POST">
+                        <button id="btn-<%= data._id %>">Validate Hash</button>
+                    </form>
+                </div>
+            <% } %>
+        <% }else{ %>
+            <h1>You are not provided access to any Image hashes !</h1>
+        <% } %>
+    </div>
+</body>
+
+</html>
